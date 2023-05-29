@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="1024.0" style="-fx-background-color: white;" stylesheets="@../../css/admin.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.DoctorDashboardController">
+   <children>
+      <AnchorPane layoutX="251.0" layoutY="44.0" prefHeight="533.0" prefWidth="735.0" style="-fx-background-color: white; -fx-background-radius: 5px;" stylesheets="@../../css/admin.css">
+         <children>
+            <Button fx:id="deletePatient" layoutX="27.0" layoutY="459.0" mnemonicParsing="false" onAction="#deletePatientAction" prefHeight="42.0" prefWidth="150.0" styleClass="saveButton" text="Delete">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="UpdateButton" layoutX="186.0" layoutY="459.0" mnemonicParsing="false" onAction="#UpdateButtonAction" prefHeight="42.0" prefWidth="150.0" styleClass="cancelButton" text="Update">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="newPatientButton" layoutX="27.0" layoutY="51.0" mnemonicParsing="false" onAction="#newPatientButtonAction" prefHeight="42.0" prefWidth="146.0" styleClass="createBtn" text="New Patients">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TableView fx:id="patientsTableView" layoutX="27.0" layoutY="105.0" prefHeight="345.0" prefWidth="725.0">
+               <columns>
+                  <TableColumn fx:id="patientID" prefWidth="38.0" text="ID" />
+                  <TableColumn fx:id="patientUsername" prefWidth="78.0" text="Username" />
+                  <TableColumn fx:id="patientFirstName" prefWidth="78.33331298828125" text="First Name" />
+                  <TableColumn fx:id="PatientLastName" prefWidth="114.0" text="Last Name" />
+                  <TableColumn fx:id="PatientAge" prefWidth="49.33331298828125" text="Age" />
+                  <TableColumn fx:id="PatientEmail" prefWidth="120.0" text="Email" />
+                  <TableColumn fx:id="PatientPhone" prefWidth="118.6666259765625" text="Phone" />
+                  <TableColumn fx:id="PatientGender" prefWidth="125.0" text="Gender" />
+               </columns>
+            </TableView>
+            <TextField fx:id="searchBar" layoutX="527.0" layoutY="50.0" prefHeight="42.0" prefWidth="223.0" promptText="Search" />
+            <Button fx:id="searchButton" layoutX="677.0" layoutY="50.0" mnemonicParsing="false" onAction="#searchButtonAction" prefHeight="41.0" prefWidth="74.0" style="-fx-background-color: #4C4C6D;" text="Search">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="createBtn" />
+                  <String fx:value="showAllBtn" />
+               </styleClass>
+            </Button>
+            <Button layoutX="375.0" layoutY="39.0" mnemonicParsing="false" prefHeight="121.0" prefWidth="150.0" style="-fx-background-color: transparent;" styleClass="deleteBtn" />
+            <Button fx:id="ResetButton" layoutX="345.0" layoutY="459.0" mnemonicParsing="false" onAction="#ResetButtonAction" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #4C4C6D;" styleClass="saveButton" text="Refresh" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" prefHeight="620.0" prefWidth="253.0" styleClass="sidePar" stylesheets="@../../css/admin.css">
+         <children>
+            <Button fx:id="patientsButton" alignment="BASELINE_LEFT" layoutY="211.0" mnemonicParsing="false" onAction="#patientsButtonAction" prefHeight="49.0" prefWidth="253.0" styleClass="sideParItemActive" text="Patients">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="appointmentsButton" alignment="BASELINE_LEFT" layoutY="260.0" mnemonicParsing="false" onAction="#appointmentsButtonAction" prefHeight="49.0" prefWidth="253.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Appointments" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="logoutButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="309.0" mnemonicParsing="false" onAction="#logoutButtonAction" prefHeight="49.0" prefWidth="253.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Logout" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="55.86" radius="13.465" width="0.0">
+               <color>
+                  <Color opacity="0.6980392336845398" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <ImageView fitHeight="121.0" fitWidth="153.0" layoutX="69.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/LOGO.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,111 @@
+/*
+Doctor Dashboard CSS
+Created on: May 11, 2023
+Author: Yahya
+*/
+
+/* Sidebar */
+.sidePar {
+-fx-background-color: #104a61;
+}
+
+.sideParItem {
+-fx-background-color:  transparent;
+-fx-text-fill: #F6F1F1;
+}
+
+.sideParItem:hover {
+-fx-background-color: #088395;
+-fx-text-fill: white;
+}
+
+.sideParItemActive {
+-fx-background-color: #05BFDB;
+-fx-text-fill: white;
+}
+
+/* Text fields */
+.textField {
+-fx-padding: 5 25 5 25;
+-fx-border-color: #394867;
+-fx-font-family: 'Roboto', sans-serif;
+-fx-font-size: 14px;
+}
+
+/* Buttons */
+.saveButton {
+-fx-background-color: #489ef4;
+-fx-text-fill: white;
+-fx-font-family: 'Roboto', sans-serif;
+-fx-font-size: 14px;
+-fx-font-weight: bold;
+}
+
+.cancelButton {
+-fx-background-color: tomato;
+-fx-text-fill: white;
+-fx-font-family: 'Roboto', sans-serif;
+-fx-font-size: 14px;
+-fx-font-weight: bold;
+}
+
+.saveButton:hover,
+.cancelButton:hover {
+-fx-opacity: 0.8;
+}
+
+.createBtn {
+-fx-background-color: #726bfa;
+-fx-text-fill: white;
+-fx-font-family: 'Roboto', sans-serif;
+-fx-font-size: 14px;
+-fx-font-weight: bold;
+}
+
+.createBtn:hover {
+-fx-background-color: #9c96ff;
+-fx-text-fill: white;
+-fx-opacity: 0.8;
+}
+
+.updateBtn {
+-fx-background-color: #9c96ff;
+-fx-text-fill: white;
+-fx-font-family: 'Roboto', sans-serif;
+-fx-font-size: 14px;
+-fx-font-weight: bold;
+}
+
+.updateBtn:hover {
+-fx-background-color: #7ccafc;
+-fx-text-fill: white;
+-fx-opacity: 0.8;
+}
+
+.deleteBtn {
+-fx-background-color: #de4e00;
+-fx-text-fill: white;
+-fx-font-family: 'Roboto', sans-serif;
+-fx-font-size: 14px;
+-fx-font-weight: bold;
+}
+
+.deleteBtn:hover {
+-fx-background-color: #cf6227;
+-fx-text-fill: white;
+-fx-opacity: 0.8;
+}
+
+.showAllBtn {
+-fx-background-color: #363f70;
+-fx-text-fill: white;
+-fx-font-family: 'Roboto', sans-serif;
+-fx-font-size: 14px;
+-fx-font-weight: bold;
+}
+
+.showAllBtn:hover {
+-fx-background-color: #6358f5;
+-fx-text-fill: white;
+-fx-opacity: 0.8;
+}

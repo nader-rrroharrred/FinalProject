@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="1024.0" style="-fx-background-color: white;" stylesheets="@../../css/admin.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.PatientDashboardController">
+   <children>
+      <AnchorPane layoutX="334.0" layoutY="69.0" prefWidth="423.0" style="-fx-background-color: transparent; -fx-background-radius: 5px;">
+         <children>
+            <Button fx:id="bookNowButton" layoutX="109.0" layoutY="93.0" mnemonicParsing="false" onAction="#bookNowButtonAction" prefHeight="42.0" prefWidth="124.0" styleClass="saveButton" text="Book Now">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TableView fx:id="appointmentTableView" layoutX="-23.0" layoutY="146.0" prefHeight="328.0" prefWidth="647.0">
+               <columns>
+                  <TableColumn fx:id="appointmentID" prefWidth="63.333343505859375" text="ID" />
+                  <TableColumn fx:id="appointmentDay" prefWidth="120.33334350585938" text="Day" />
+                  <TableColumn fx:id="appointmentDate" prefWidth="121.3333740234375" text="Date" />
+                  <TableColumn fx:id="appointmentTime" prefWidth="167.0" text="Time" />
+                  <TableColumn fx:id="appointmentStatus" prefWidth="171.0" text="Status" />
+               </columns>
+            </TableView>
+            <Button fx:id="availableAppointments" layoutX="-23.0" layoutY="93.0" mnemonicParsing="false" onAction="#availableAppointmentsAction" prefHeight="42.0" prefWidth="124.0" style="-fx-background-color: #545B77;" styleClass="saveButton" text="Appointments">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="1.0" prefHeight="620.0" prefWidth="253.0" styleClass="sidePar" stylesheets="@../../css/admin.css">
+         <children>
+            <Button fx:id="homeButton" alignment="BASELINE_LEFT" layoutY="211.0" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="49.0" prefWidth="253.0" styleClass="sideParItemActive" text="Home">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="myAppointmentButton" alignment="BASELINE_LEFT" layoutY="260.0" mnemonicParsing="false" onAction="#myAppointmentButtonAction" prefHeight="49.0" prefWidth="253.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="My Appointments" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="logOutButton1" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="309.0" mnemonicParsing="false" onAction="#logOutButtonAction" prefHeight="49.0" prefWidth="253.0" styleClass="sideParItem" stylesheets="@../../css/admin.css" text="Logout" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="55.86" radius="13.465" width="0.0">
+               <color>
+                  <Color opacity="0.6980392336845398" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <ImageView fitHeight="121.0" fitWidth="153.0" layoutX="71.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/LOGO.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="474.0" layoutY="60.0" text="Available Appointments" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
